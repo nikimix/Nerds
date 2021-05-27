@@ -77,6 +77,10 @@ body {
     background-color: var(--basic-white);
 }
 
+.page p{
+  white-space: pre-line;
+}
+
 .page a {
   text-decoration: none;
   color: var(--basic-black);
@@ -135,6 +139,7 @@ color: var(--special-black);
    font-size: 55px;
    line-height: 55px;
    color: var(--basic-black);
+   white-space: pre-line;
  }
 
  .advantages button {
@@ -199,6 +204,7 @@ color: var(--special-black);
   font-size: 45px;
   line-height: 45px;
   color: var(--basic-black);
+  white-space: pre-line;
 }
 
 /* type-orders */
@@ -219,7 +225,9 @@ color: var(--special-black);
   text-transform: uppercase;
   color: var(--basic-black);
 }
-
+.percent dd {
+  white-space: pre-line;
+}
 .percent dt {
   font-size: 45px;
   font-weight: bold;
