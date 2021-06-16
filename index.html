@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Нёрдс</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerds</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,11 +13,12 @@
 <body class="body">
 
     <header class="main-header">
+
         <nav class="main-nav">
-            <a class="main-header-logo" href="index.html">
+            <a class="main-logo" href="index.html">
                 <img src="img/svg/nerds-logo.svg" width="160" height="65" alt="Лого &laquo;Нёрдс&raquo;">
             </a>
-            <ul class="site-nav">
+            <ul class="list-nav">
                 <li>
                     <a href="#">Студия</a>
                 </li>
@@ -29,50 +32,50 @@
                     <a href="#">Контакты</a>
                 </li>
             </ul>
-            <a class="user-nav" href="#">Корзина</a>
+            <a class="cart" href="#"><img src="img/svg/cart-icon.svg" width="15" height="11" alt=""> Корзина</a>
         </nav>
+
     </header>
 
-    <main class="container">
-
-        <h1 class="visually-hidden">Дизайн-Студия &laquo;Нёрдс&raquo;</h1>
+    <main class="main">
+        
+        <h1 class="visually-hidden">Интернет-магазин &laquo;Nerds&raquo;</h1>
 
         <section class="advantages">
-            <h2 class="visually-hidden">Преимущества:</h2>
-            <h3 class="advantages-heading">Долго, дорого,
-                скурпулёзно.</h3>
-            <p>Математически выверенный дизайн
-                для вашего сайта или мобильного приложения.</p>
-            <button type="button">Узнать больше</button>
+            <div class="advantages-informations">
+                <h2 class="visually-hidden">Преимущества:</h2>
+                <h3 class="advantages-title">Долго, дорого,
+                    скрупулёзно.</h3>
+                <p>Математически выверенный дизайн
+                    для вашего сайта или мобильного приложения.</p>
+                <button type="button">Узнать больше</button>
+            </div>
+            <img src="img/nerds-index-slide-one.jpeg" width="760" height="431" alt="слайдер">
         </section>
 
-
-        <div class="slide">
-            <!-- Здесь будут слайды -->
-        </div>
-
         <section class="services">
-            <h2 class="visually-hidden">Разработка для бизнеса:</h2>
-            <ul>
+            <h2 class="visually-hidden">Услуги</h2>
+            <ul class="list-services">
                 <li class="item-website">
-                    <img class="img-website" src="img/web-site.jpg" width="300" height="146" alt="Логотип веб сайт">
-                    <h3 class="services-heading">Веб-сайты</h3>
+                    <img class="img-website" src="img/web-site.jpg" width="300" height="146"
+                        alt="Иконка ноутбука с открытым браузером">
+                    <h3 class="services-title">Веб-сайты</h3>
                     <p>Мир никогда не будет прежним
                         после того как увидит ваш сайт!</p>
                     <button type="button">Заказать</button>
                 </li>
                 <li class="item-mobileapp">
                     <img class="img-mobileapp" src="img/mobile-app.jpg" width="300" height="146"
-                        alt="Лого мобильное приложение">
-                    <h3 class="services-heading">Приложения</h3>
+                        alt="Иконка 2-ух смартфонов">
+                    <h3 class="services-title">Приложения</h3>
                     <p>Покорите топ-10 приложений
                         в AppStore и Google Play</p>
                     <button type="button">Заказать</button>
                 </li>
                 <li class="item-presentations">
                     <img class="img-presentations" src="img/presentations.jpg" width="300" height="146"
-                        alt="Лого презентация">
-                    <h3 class="services-heading">Презентации</h3>
+                        alt="Иконка доски с диаграммами">
+                    <h3 class="services-title">Презентации</h3>
                     <p>Вы даже не подозреваете
                         насколько вы изумительны!</p>
                     <button type="button">Заказать</button>
@@ -80,31 +83,29 @@
             </ul>
         </section>
 
-        <!--  Здесь вместо линии должен быть прямугольник потом сделаю пока не знаю как-->
-        <hr>
-
-        <div>
+        <div class="about-studio">
 
             <h2 class="visually-hidden">О студии:</h2>
+            <div class="about-studio-container">
+                <section class="studio">
+                    <h3 class="studio-title">Мы - маленькая, но гордая
+                        дизайн-студия из Краснодара.</h3>
+                    <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчёт
+                        превыше креатива. Работаем не покладая рук, как роботы.</p>
+                </section>
 
-            <section class="studio">
-                <h3 class="studio-heading">Мы - маленькая, но гордая
-                    дизайн-студия из Краснодара.</h3>
-                <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчёт
-                    превыше креатива. Работаем не покладая рук, как роботы.</p>
-            </section>
-
-            <section class="type-orders">
-                <h3 class="heading-orders">Выполняем заказы на разработку:</h3>
-                <ul class="list-orders">
-                    <li>Веб-сайтов любой сложности</li>
-                    <li>Мобильных приложений для iOS и Android</li>
-                    <li>Слайд шоу и видео для корпоративных презентаций</li>
-                </ul>
-            </section>
-
-            <section class="percent">
-                <h3 class="percent-heading">С <time datetime="2004-01-01">2004 года</time> любим точность во всём:</h3>
+                <section class="type-orders">
+                    <h3 class="title-orders">Выполняем заказы на разработку:</h3>
+                    <ul class="list-orders">
+                        <li>Веб-сайтов любой сложности</li>
+                        <li>Мобильных приложений для iOS и Android</li>
+                        <li>Слайд шоу и видео для корпоративных презентаций</li>
+                    </ul>
+                </section>
+            </div>
+            <section class="about-studio-percent">
+                <img src="img/nerds-illustration.jpg" width="360" height="208" alt="декоративная картинка надписи Nerds">
+                <h3 class="percent-title">С <time datetime="2004-01-01">2004 года</time> любим точность во всём:</h3>
                 <dl>
                     <dt>146<sup>%</sup></dt>
                     <dd>Уровень
@@ -119,11 +120,9 @@
             </section>
         </div>
 
-        <hr>
-
-        <section>
-            <h2 class="visually-hidden">Партнеры:</h2>
-            <ul>
+        <section class="partners">
+            <h2 class="visually-hidden">Партнеры</h2>
+            <ul class="list-partners">
                 <li>
                     <img src="img/partners/logo-html-academy.svg" width="199" height="68" alt="logo htmlacademy">
                 </li>
@@ -140,8 +139,6 @@
             </ul>
         </section>
 
-        <hr>
-
     </main>
 
     <footer class="main-footer">
@@ -150,7 +147,7 @@
             <h2 class="visually-hidden">Как добраться?</h2>
 
             <img src="img/map.jpg" width="1440" height="416" alt="Карта">
-            <h3 class="name-heading">NЁRDS DESING STUDIO</h3>
+            <h3 class="studio-name">NЁRDS DESING STUDIO</h3>
             <p class="address">
                 191186, Санкт-Петербург,
                 ул. Б. Конюшенная, д. 19/8
@@ -160,14 +157,14 @@
             <button type="button">Напишите нам</button>
         </section>
 
-        <section class="social">
-            <h2 class="social-heading">Давайте дружить, это выгодно!</h2>
-            <p>Скидка 10% для друзей из социальных сетей.</p>
-            <ul>
-                <li><a href="#">Вконтакте</a></li>
-                <li><a href="#">Фейсбук</a></li>
-                <li><a href="#">Инстаграм</a></li>
+        <section class="social-networks">
+            <ul class="list-social-networks">
+                <li><a href="#"><img src="img/svg/vk-icon.svg" width="26" height="15" alt="">Вконтакте</a></li>
+                <li><a href="#"><img src="img/svg/fb-icon.svg" width="12" height="22" alt="">Фейсбук</a></li>
+                <li><a href="#"><img src="img/svg/insta-icon.svg" width="21" height="21" alt="">Инстаграм</a></li>
             </ul>
+            <h2 class="social-networks-title">Давайте дружить, это выгодно!</h2>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
         </section>
     </footer>
 </body>

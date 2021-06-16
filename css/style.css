@@ -53,7 +53,6 @@
 }
 
 /* visually-hidden */
-
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -63,7 +62,6 @@
 }
 
 /* body */
-
 body {
     min-width: 1440px;
     margin: 0;
@@ -75,10 +73,22 @@ body {
     color: var(--basic-extra-black);
     text-transform: none;
     background-color: var(--basic-white);
+
+}
+.page {
+  height: 100%;
+}
+
+.body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 .page p{
   white-space: pre-line;
+  margin: 0;
+  padding: 0;
 }
 
 .page a {
@@ -102,28 +112,57 @@ body {
   list-style: none;
 }
 
-/* img {
-  max-width: 100%;
-  height: auto;
-} */
- 
-
 /* header */
+
+.main-header {
+  background-color: var(--basic-extra-white);
+  display: grid;
+  justify-content: center;
+  height: min-content;
+}
+
+.main-logo {
+  margin-top: 49px;
+}
 
 .main-nav {
   line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
-  background-color: var(--basic-extra-white);
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  height: min-content;
+  width: 1160px;
+  align-items: end;
 }
 
-.site-nav a:hover,
-.user-nav:hover {
+.list-nav {
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  column-gap: 45px;
+  height: min-content;
+  padding: 0;
+  margin: 0 246px 9px 202px;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  margin-bottom: 9px;
+  justify-content: space-between;
+}
+.cart img {
+  margin: 8px 25px 0 0;
+}
+
+
+.list-site-nav a:hover,
+.cart:hover {
   color: var(--basic-pink);
 }
 
-.site-nav a:active,
-.user-nav:active {
+.list-site-nav a:active,
+.cart:active {
 color: var(--special-black);
 }
 
@@ -132,19 +171,36 @@ color: var(--special-black);
 }
  */
 
+ /* main */
+
+ .main {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  justify-items: center;
+}
+
  /* advantages */
 
- .advantages-heading {
+ .advantages {
+   display: grid;
+   grid-template-columns: 397px auto;
+   width: 1160px;
+ }
+
+ .advantages-title {
    font-weight: 500;
    font-size: 55px;
    line-height: 55px;
    color: var(--basic-black);
    white-space: pre-line;
+   margin-top: 78px;
+   margin-bottom: 25px;
  }
 
- .advantages button {
+  .advantages button {
    width: 240px;
    background-color: var(--basic-pink);
+   margin-top: 38px;
  }
  .advantages button:hover {
    background-color: var(--basic-extra-pink);
@@ -155,12 +211,31 @@ color: var(--special-black);
 
  /* services */
 
- .services-heading {
+ .services {
+   display: grid;
+   width: 1160px;
+   border-bottom: 2px solid var(--basic-extra-white);
+ }
+
+
+ .list-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: min-content;
+  padding: 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  column-gap: 100px;
+ }
+
+ .services-title {
    font-weight: bold;
    font-size: 24px;
    line-height: 30px;
    text-transform: uppercase;
    color: var(--basic-black);
+   margin-top: 25px;
+   margin-bottom: 16px;
  }
 
  .services button{
@@ -169,12 +244,15 @@ color: var(--special-black);
 
  .item-website button {
    background-color: var(--basic-pink);
+   margin-top: 32px;
  }
  .item-mobileapp button {
   background-color: var(--basic-green);
+  margin-top: 32px;
  }
  .item-presentations button {
    background-color: var(--basic-yellow);
+   margin-top: 31px;
  }
 
  .item-website button:hover{
@@ -197,22 +275,42 @@ color: var(--special-black);
    background-color: var(--special-yellow);
  }
 
+
  /* studio */
 
-.studio-heading {
+
+.about-studio {
+  display: grid;
+  width: 1160px;
+  border-bottom: 2px solid var(--basic-extra-white);
+  grid-template-columns: 1fr min-content;
+}
+
+
+
+.about-studio-percent{
+text-align: center;
+}
+
+.studio-title {
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
   color: var(--basic-black);
   white-space: pre-line;
+  margin-top: 73px;
+  margin-bottom: 32px;
 }
 
 /* type-orders */
 
-.heading-orders {
+.title-orders {
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin-top: 40px;
+  margin-bottom: 23px;
 }
 
 /* маркеры списка пока не знаю как сделать как на макете
@@ -220,15 +318,25 @@ color: var(--special-black);
   
 } */
 
-.percent-heading{
+.about-studio-percent img {
+margin-top: 39px;
+}
+
+.percent-title{
   font-weight: bold;
+  font-size: 16px;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin-top: 37px;
+  margin-bottom: 31px;
 }
-.percent dd {
+
+
+.about-studio-percent dd {
   white-space: pre-line;
 }
-.percent dt {
+
+.about-studio-percent dt {
   font-size: 45px;
   font-weight: bold;
   line-height: 64px;
@@ -237,9 +345,39 @@ color: var(--special-black);
 
 /* partners */
 
+.partners {
+  display: grid;
+  width: 1160px;
+  border-bottom: 2px solid var(--basic-extra-white);
+}
+
+.list-partners {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 40px;
+  padding: 0;
+  margin: 46px 43px 46px 32px;
+  height: min-content;
+  align-items: center;
+  justify-items: center;
+}
+
 /* footer */
 
-.name-heading {
+.main-footer {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
+
+.contacts {
+  display: grid;
+  min-width: inherit;
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+
+.studio-name {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
@@ -260,14 +398,23 @@ color: var(--special-black);
 }
 
 /* social */
+.social-networks {
+  display: grid;
+  width: 1160px;
+  grid-template-columns: min-content auto;
+}
 
-.social-heading {
+.list-social-network {
+  
+}
+
+.social-networks-title {
   font-size: 36px;
   font-weight: bold;
   line-height: 36px;
   color: var(--basic-black);
 }
-.social p {
+.social-networks p {
   color: var(--basic-extra-gray);
   line-height: 22px;
 }
