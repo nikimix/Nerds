@@ -116,53 +116,56 @@ body {
 
 .main-header {
   background-color: var(--basic-extra-white);
-  display: grid;
+  display: flex;
   justify-content: center;
-  height: min-content;
 }
 
 .main-logo {
   margin-top: 49px;
+  margin-right: 202px;
+  line-height: 0;
 }
 
 .main-nav {
   line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
-  display: grid;
-  grid-template-columns: min-content 1fr min-content;
-  height: min-content;
+  display: flex;
   width: 1160px;
-  align-items: end;
-}
-
-.list-nav {
-  display: grid;
-  grid-template-columns: repeat(4, min-content);
-  column-gap: 45px;
-  height: min-content;
-  padding: 0;
-  margin: 0 246px 9px 202px;
-}
-
-.cart {
-  display: grid;
-  grid-template-columns: min-content min-content;
-  margin-bottom: 9px;
   justify-content: space-between;
-}
-.cart img {
-  margin: 8px 25px 0 0;
+  align-items: flex-end;
 }
 
+.site-nav {
+  display: flex;
+  width: 437px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  height: min-content;
+  margin: 75px 0 9px 0;
+  padding: 0;
+}
 
-.list-site-nav a:hover,
-.cart:hover {
+.user-nav {
+  max-width: 115px;
+  margin-left: 246px;
+  margin-bottom: 9px;
+  padding-left: 25px;
+  height: min-content;
+}
+/* .user-nav img {
+  margin-right:25px;
+} */
+
+
+.site-nav a:hover,
+.user-nav:hover {
   color: var(--basic-pink);
 }
 
-.list-site-nav a:active,
-.cart:active {
+.site-nav a:active,
+.user-nav:active {
 color: var(--special-black);
 }
 
@@ -175,19 +178,28 @@ color: var(--special-black);
 
  .main {
   display: grid;
-  grid-template-rows: repeat(4, min-content);
-  justify-items: center;
+  grid-template-rows: repeat(4, auto);
 }
 
  /* advantages */
 
- .advantages {
-   display: grid;
-   grid-template-columns: 397px auto;
-   width: 1160px;
+ .studio-features {
+  background-color: var(--basic-extra-white);
+  display: flex;
+  justify-content: center;
  }
 
- .advantages-title {
+ .studio-features-container {
+   display: flex;
+   width: 1160px;
+ }
+ .informations-features-container{
+   display: flex;
+   flex-direction: column;
+   width: 397px;
+ }
+
+ .studio-features .principle {
    font-weight: 500;
    font-size: 55px;
    line-height: 55px;
@@ -197,35 +209,45 @@ color: var(--special-black);
    margin-bottom: 25px;
  }
 
-  .advantages button {
-   width: 240px;
-   background-color: var(--basic-pink);
-   margin-top: 38px;
- }
- .advantages button:hover {
+  .studio-features button {
+    width: 240px;
+    flex-wrap: wrap;
+    background-color: var(--basic-pink);
+    margin-top: 38px;
+    height: min-content;
+    padding: 17px 54px 15px 54px;
+  }
+ .studio-features button:hover {
    background-color: var(--basic-extra-pink);
  }
- .advantages button:active {
+ .studio-features button:active {
    background-color: var(--special-pink);
  }
 
  /* services */
 
  .services {
-   display: grid;
+   display: flex;
+   justify-content: center;
+ }
+
+ .services-container {
+   display: flex;
    width: 1160px;
+   min-height: 510px;
+   align-items: center;
    border-bottom: 2px solid var(--basic-extra-white);
  }
 
 
  .list-services {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: min-content;
+  display: flex;
+  justify-content: space-between;
+  min-width: 1100px;
+  height: min-content;
+  margin: 80px 0 80px 0;
   padding: 0;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  column-gap: 100px;
+  flex-wrap: wrap;
  }
 
  .services-title {
@@ -280,19 +302,23 @@ color: var(--special-black);
 
 
 .about-studio {
-  display: grid;
+  display: flex;
+  justify-content: center;
+}
+
+.shared-container-about-studio {
+  display: flex;
   width: 1160px;
   border-bottom: 2px solid var(--basic-extra-white);
-  grid-template-columns: 1fr min-content;
 }
 
-
-
-.about-studio-percent{
-text-align: center;
+.about-studio-container {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
 }
 
-.studio-title {
+.about-studio-container .about-us {
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
@@ -313,53 +339,85 @@ text-align: center;
   margin-bottom: 23px;
 }
 
-/* маркеры списка пока не знаю как сделать как на макете
- .list-orders {
-  
-} */
+.list-orders {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 120px;
+  width: 399px;
+  margin: 0;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+.about-studio-percent{
+  display: flex;
+  flex-direction: column;
+}
 
 .about-studio-percent img {
 margin-top: 39px;
 }
 
-.percent-title{
+.about-studio-percent .date-studio{
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
   color: var(--basic-black);
   margin-top: 37px;
   margin-bottom: 31px;
+  align-self: center;
 }
 
+.quality-percentage {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
 
-.about-studio-percent dd {
+.level-dedication, .compliance-timing, .minimum-prepayment {
+  display: flex;
+  flex-direction: column;
+}
+
+.level-dedication dt, .compliance-timing dt, .minimum-prepayment dt {
+  order: 1;
   white-space: pre-line;
+  line-height: 18px;
 }
-
-.about-studio-percent dt {
-  font-size: 45px;
-  font-weight: bold;
-  line-height: 64px;
-  color: var(--basic-black);
+.level-dedication dd, .compliance-timing dd, .minimum-prepayment dd {
+margin:0;
+padding: 0;
+font-size: 45px;
+font-weight: bold;
+line-height: 64px;
+color: var(--basic-black);
 }
 
 /* partners */
 
 .partners {
-  display: grid;
-  width: 1160px;
+  display: flex;
+  justify-content: center;
+}
+
+.partners-container {
+  display: flex;
+  
   border-bottom: 2px solid var(--basic-extra-white);
+  justify-content: center;
 }
 
 .list-partners {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 40px;
-  padding: 0;
-  margin: 46px 43px 46px 32px;
-  height: min-content;
+  display: flex;
+  width: 1160px;
+  justify-content: space-around;
   align-items: center;
-  justify-items: center;
+  
+  padding: 0;
+  margin:46px 0 44px 0;
+  
 }
 
 /* footer */

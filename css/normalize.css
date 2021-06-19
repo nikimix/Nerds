@@ -9,7 +9,6 @@
  */
 
  html {
-    line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
   }
   
@@ -124,7 +123,7 @@
   
   sub,
   sup {
-    font-size: 75%;
+    font-size: 26px;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
