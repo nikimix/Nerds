@@ -313,7 +313,7 @@ color: var(--special-black);
   width: 800px;
 }
 
-.about-us-wrapper p:first-child {
+.studio-principles p:first-child {
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
@@ -532,4 +532,10 @@ body {
 
 .product-page ul {
   list-style: none;
+}
+
+/*store main footer */
+
+.store-main-footer {
+  padding: 60px 0 68px 0;
 }
