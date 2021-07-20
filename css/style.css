@@ -929,7 +929,7 @@ body {
   align-items: center;
   background-color: var(--basic-extra-white);
   width: 100%;
-  min-height: 215px;
+  min-height: 235px;
 }
 
 .main-title {
@@ -1459,6 +1459,7 @@ body {
   height: 50px;
   background-color: var(--basic-extra-white);
   border-radius: 3px;
+  text-transform: uppercase;
 }
 
 .btn a:hover {
