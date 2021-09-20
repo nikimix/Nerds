@@ -864,7 +864,7 @@ body {
           box-sizing: border-box;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 0 auto;
   width: 960px;
   height: 590px;
   padding: 63px 99px 84px 100px;
